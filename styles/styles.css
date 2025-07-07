@@ -14,7 +14,7 @@
     padding: 0px;
 }
 body {
-    background-color: black;
+    background: linear-gradient(to top, #000000, #1a0033);
     box-sizing: border-box;    
 }
 .cabecalho{
@@ -28,7 +28,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #8600E0;
-    font-size: 22px;
+    font-size: 1.25rem;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -49,14 +49,14 @@ body {
 }
 .principal__titulo{
     font-family: "Krona One", sans-serif;
-    font-size: 35px;
+    font-size: 2.25rem;
 }
 .principal__titulo__destaque{
     color: #8600E0;
 }
 .principal__texto{
     font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
+    font-size: 1.25rem;
 }
 .principal__texto__destaque{
     color: #8600E0;
@@ -70,7 +70,7 @@ body {
 .rodape__titulo{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 1.5rem;
     color: white;
     text-align: center;
     padding: 20px;
@@ -78,7 +78,7 @@ body {
 .rodape__texto{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     color: rgb(198, 197, 197);
     text-align: center;
     margin-top: 10px;
@@ -89,16 +89,26 @@ body {
 }
 .home__link{
     background-color: transparent;
-    border: 2px solid #8600E0;
+    border: 2px solid var(--cor-principal);
     color: white;
     padding: 5% 15%;
-    border-radius: 7%;
+    border-radius: 16%;
     text-decoration: none;
     font: var(--fonte-secundaria);
     font-weight: 600;
+    box-shadow: 0 2px 16px 0 rgba(134,0,224,0.15);
+    transition: 
+        background 0.3s,
+        color 0.3s,
+        transform 0.2s,
+        box-shadow 0.3s;
+    text-align: center;
+    width: 30%;
 }
 .home__link:hover{
     background-color: #9903fe;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 24px 0 rgba(134,0,224,0.25);
 }
 /*projects*/
 .prprincipal {
@@ -108,7 +118,7 @@ body {
 }
 .prprincipal__titulo{
     font-family: "Krona One", sans-serif;
-    font-size: 35px;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 30px;
     margin-top: 0%;
@@ -138,12 +148,24 @@ body {
 .prprincipal__botao{
     background-color: #0f011b;
     color: white;
-    padding: 5% 20%;
-    border-radius: 7%;
+    padding: 5% 15%;
+    border-radius: 16%;
     text-decoration: none;
+    font: var(--fonte-secundaria);
+    font-weight: 600;
+    box-shadow: 0 2px 16px 0 rgba(134,0,224,0.15);
+    transition: 
+        background 0.3s,
+        color 0.3s,
+        transform 0.2s,
+        box-shadow 0.3s;
+    text-align: center;
+    width: 30%;
 }
 .prprincipal__botao:hover{
     background-color: #9903fe;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 24px 0 rgba(134,0,224,0.25);
 }
 .img__projects{
     width: 100%;
@@ -171,15 +193,75 @@ body {
 }
 .botao__links{
     background-color: transparent;
-    border: 2px solid #8600E0;
+    border: 2px solid var(--cor-principal);
     color: white;
-    padding: 50px 90px;
-    border-radius: 7%;
+    padding: 30px 0;
+    border-radius: 16px;
     text-decoration: none;
-    font: var(--fonte-secundaria);
+    font-family: var(--fonte-secundaria);
     font-weight: 600;
+    width: 250px;
+    margin: 10px;
+    box-shadow: 0 2px 16px 0 rgba(134,0,224,0.15);
+    transition: 
+        background 0.3s,
+        color 0.3s,
+        transform 0.2s,
+        box-shadow 0.3s;
+    font-size: 1.1rem;
 }
 .botao__links:hover{
-    background-color: #8600E0;
-    color: rgb(255, 255, 255);
+    background: var(--cor-principal);
+    color: #fff;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 24px 0 rgba(134,0,224,0.25);
+}
+
+@media (max-width: 1200px) {
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .principal {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    .cabecalho {
+        padding: 3% 5% 0% 5%;
+    }
+    .home__link {
+        padding: 5% 10%;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .prprincipal__titulo {
+        font-size: 2.25rem;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 3%;
+    }
+    .prprincipal__conteudo {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        align-items: center;
+    }
+    .contatos {
+        min-height: 100vh;
+    }
+    .contatos__botao {
+        align-items: center;
+        gap: 30px;
+    }
+    .botao__links {
+    width: 250px;
+    max-width: 90vw;
+    padding: 30px 50px;
+    font-size: 1.1rem;
+  }
 }
