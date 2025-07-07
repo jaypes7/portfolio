@@ -216,7 +216,10 @@ body {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 6px 24px 0 rgba(134,0,224,0.25);
 }
-
+.index__photo {
+    width: 50%;
+    height: 60%;
+}
 @media (max-width: 1200px) {
     body {
         width: 100vw;
@@ -264,4 +267,8 @@ body {
     padding: 30px 50px;
     font-size: 1.1rem;
   }
+  .index__photo {
+    width: 100%;
+    height: 60%;
+}
 }
